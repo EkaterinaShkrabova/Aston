@@ -1,5 +1,7 @@
 package Lesson_2;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -8,9 +10,13 @@ public class Main {
         printColor();
         compareNumbers();
         checkSumBetween();
-        positiveOrNegative();
-        positiveOrNegativeBoolean();
-        stringRepeat();
+        printPositiveOrNegative();
+        positiveOrNegativeTrueOrFalse();
+        stringRepeat("Hello", 3);
+        boolean isLeapYear = isLeapYear(2000);
+        System.out.println(isLeapYear);
+        change1To0And0To1();
+
 
     }
 
@@ -65,7 +71,7 @@ public class Main {
         }
     }
 
-    public static void positiveOrNegative() {
+    public static void printPositiveOrNegative() {
         int a = -5;
         if (a >= 0) {
             System.out.println("Положительное число");
@@ -75,21 +81,41 @@ public class Main {
         }
     }
 
-    public static void positiveOrNegativeBoolean() {
+    public static void positiveOrNegativeTrueOrFalse() {
         int a = -100;
         if (a >= 0) {
-            System.out.println("false");
+            System.out.println(false);
         } else {
-            System.out.println("true");
+            System.out.println(true);
         }
     }
 
-    public static void stringRepeat() {
-        String a1 = "Hello ";
-        int b = 3;
+    public static void stringRepeat(String a1, int b) {
+
         String repeated = a1.repeat(b);
         System.out.println(repeated);
+    }
 
+    public static boolean isLeapYear(int year) {
+        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+            return true;
+        }
+        return false;
+    }
+
+    public static void change1To0And0To1() {
+
+        int[] arrayNumbers1 = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
+        for (int i = 0; i < arrayNumbers1.length; i++) {
+            if (arrayNumbers1[i] == 1) {
+                arrayNumbers1[i] = 0;
+            } else if (arrayNumbers1[i] == 0) {
+                arrayNumbers1[i] = 1;
+            }
+        }
+        System.out.println(Arrays.toString(arrayNumbers1));
 
     }
+
+
 }
