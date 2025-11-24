@@ -118,13 +118,14 @@ public class Main {
         System.out.println(Arrays.toString(arrayNumbers1));
 
     }
-public static void createArrayFrom1To100() {
+
+    public static void createArrayFrom1To100() {
         int[] numbers = new int[100];
-        for (int i = 0; i< numbers.length; i++) {
-            numbers[i]=i+1;
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = i + 1;
         }
-    System.out.println(Arrays.toString(numbers));
-}
+        System.out.println(Arrays.toString(numbers));
+    }
 
 
 }
