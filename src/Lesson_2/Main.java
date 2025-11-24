@@ -1,5 +1,6 @@
 package Lesson_2;
 
+import java.security.spec.RSAOtherPrimeInfo;
 import java.util.Arrays;
 
 public class Main {
@@ -16,6 +17,7 @@ public class Main {
         boolean isLeapYear = isLeapYear(2000);
         System.out.println(isLeapYear);
         change1To0And0To1();
+        createArrayFrom1To100();
 
 
     }
@@ -116,6 +118,13 @@ public class Main {
         System.out.println(Arrays.toString(arrayNumbers1));
 
     }
+public static void createArrayFrom1To100() {
+        int[] numbers = new int[100];
+        for (int i = 0; i< numbers.length; i++) {
+            numbers[i]=i+1;
+        }
+    System.out.println(Arrays.toString(numbers));
+}
 
 
 }
