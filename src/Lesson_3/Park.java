@@ -4,7 +4,7 @@ import java.time.LocalTime;
 
 public class Park {
 
-    class Attraction {
+    public static class Attraction {
         private String name;
         private LocalTime openTime;
         private LocalTime closeTime;
