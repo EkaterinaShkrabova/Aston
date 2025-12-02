@@ -37,5 +37,21 @@ public class Main {
             cat.printStatus();
         }
         System.out.println("В миске осталось еды: " + bowl.getFood());
+
+
+
+        Shape circle = new Circle(7, "Красный", "Желтый");
+        Shape rectangle = new Rectangle(3, 5, "Зеленый", "Черный");
+        Shape triangle = new Triangle(3, 1, 9, "Синий", "Белый");
+
+
+        System.out.println("Круг:");
+        circle.printProperties();
+
+        System.out.println("Прямоугольник:");
+        rectangle.printProperties();
+
+        System.out.println("Треугольник:");
+        triangle.printProperties();
     }
 }
