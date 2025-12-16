@@ -1,6 +1,7 @@
 package Lesson_7_testng;
 
 public class ArithmeticOperations {
+
     public static int add(int a, int b) {
         return a + b;
     }

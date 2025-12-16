@@ -29,5 +29,4 @@ public class ArithmeticOperationsTest {
     public void testDivisionByZero() {
         ArithmeticOperations.divide(4, 0);
     }
-
 }
