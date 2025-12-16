@@ -1,6 +1,7 @@
 package Lesson_7_junit_5;
 
 public class ArithmeticOperations {
+
     public static int add(int a, int b) {
         return a + b;
     }
@@ -14,6 +15,7 @@ public class ArithmeticOperations {
     }
 
     public static int divide(int a, int b) {
+
         if (b == 0) {
             throw new ArithmeticException("Деление на ноль");
         }

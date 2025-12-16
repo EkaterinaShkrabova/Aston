@@ -1,6 +1,7 @@
 package Lesson_7_junit_5;
 
 public class Factorial {
+
     public static long factorial(int n) {
         if (n < 0) {
             throw new IllegalArgumentException("Число должно быть положительным");

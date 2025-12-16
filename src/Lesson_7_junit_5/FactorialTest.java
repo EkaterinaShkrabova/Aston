@@ -10,6 +10,4 @@ public class FactorialTest {
         assertEquals(1, Factorial.factorial(0));
         assertEquals(1, Factorial.factorial(1));
     }
-
-
 }
