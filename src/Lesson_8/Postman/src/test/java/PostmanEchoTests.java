@@ -1,10 +1,11 @@
 import static io.restassured.RestAssured.*;
-import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.Matchers.*;
 
 import org.junit.jupiter.api.Test;
 
 public class PostmanEchoTests {
+
     @Test
     public void getRequestTest() {
         given()
@@ -17,6 +18,7 @@ public class PostmanEchoTests {
                 .body("args.foo1", equalTo("bar1"))
                 .body("args.foo2", equalTo("bar2"));
     }
+
     @Test
     public void postRequestTest() {
         given()
@@ -27,6 +29,15 @@ public class PostmanEchoTests {
                 .post("https://postman-echo.com/post")
                 .then()
                 .statusCode(200)
-                .body("json.test", equalTo("value"));
+                // Проверка тела ответа на наличие нужного JSON
+                .body("json.test", equalTo("value"))
+                // Проверка заголовков ответа
+                .header("Content-Type", containsString("application/json"))
+                .header("Server", notNullValue())
+                .header("x-response-time", notNullValue())
+                .header("X-Processing-Time", notNullValue())
+                // Проверка наличия cookie в ответе (если сервер возвращает cookie)
+                .cookie("sails.sid", notNullValue())
+        ;
     }
 }
