@@ -29,14 +29,11 @@ public class PostmanEchoTests {
                 .post("https://postman-echo.com/post")
                 .then()
                 .statusCode(200)
-                // Проверка тела ответа на наличие нужного JSON
                 .body("json.test", equalTo("value"))
-                // Проверка заголовков ответа
                 .header("Content-Type", containsString("application/json"))
                 .header("Server", notNullValue())
                 .header("x-response-time", notNullValue())
                 .header("X-Processing-Time", notNullValue())
-                // Проверка наличия cookie в ответе (если сервер возвращает cookie)
                 .cookie("sails.sid", notNullValue())
         ;
     }
