@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -38,7 +39,7 @@ public class MtsPaymentTests {
     @BeforeAll
     public static void setUp() {
 
-        System.setProperty("webdriver.chrome.driver", "E:\\ProgramFiles\\Загрузки\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         driver.manage().window().maximize();

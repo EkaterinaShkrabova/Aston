@@ -15,7 +15,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.27.0</version>
+            <version>4.39.0</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -55,7 +55,12 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.7.36</version> <!-- или более свежая версия -->
+            <version>1.7.36</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>6.3.3</version>
         </dependency>
     </dependencies>
     <build>
